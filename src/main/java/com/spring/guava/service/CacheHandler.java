@@ -6,7 +6,6 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableList;
-import com.google.common.graph.Graph;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -32,7 +31,6 @@ public class CacheHandler {
                     public List<String> load(String key) throws Exception {
                         return getPOIListFromDB(key);
                     }
-
                 });
 
         System.out.println("jerry value:"+cahceBuilder.apply("0101"));
