@@ -35,8 +35,9 @@ public class UserRegisterListenr {
      * 处理方法
      */
     @Subscribe
-    public void regHandler(UserEvent userEvent){
+    public void regHandler(UserEvent userEvent) throws InterruptedException {
         if(Objects.equals(userEvent.getType(), UserEventType.reg)){
+            Thread.sleep(5000);
             //发送邮件
             LOGGER.info("send emial:welcome to,join us ! {}",userEvent.getUserName());
         }

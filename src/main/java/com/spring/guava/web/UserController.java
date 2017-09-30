@@ -27,4 +27,26 @@ public class UserController {
         user.setUserName("cs");
         userService.reg(user);
     }
+
+    /**
+     * 登录
+     */
+    @PostMapping("/login")
+    public void login(){
+        User user=new User();
+        user.setId(2);
+        user.setUserName("dbb");
+        userService.login(user);
+    }
+
+    /**
+     * 登出
+     */
+    @PostMapping("/logout")
+    public void logout(){
+        User user=new User();
+        user.setId(2);
+        user.setUserName("zss");
+        userService.logout(user);
+    }
 }
